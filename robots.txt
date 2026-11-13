@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://oradent-dental-clinic.vercel.app/sitemap.xml

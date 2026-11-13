@@ -134,3 +134,61 @@ body{background:#fcfbf8;color:#20313a;font-size:15px;letter-spacing:.005em}
 .building{background:#fbfaf5}
 .windows i{background:#d8d0c2}
 .door{background:#c9bda9}
+
+
+/* ORADENT REFINEMENT — clear navigation, restrained clinical identity */
+@media (max-width:720px){
+  .nav{display:flex;justify-content:space-between;align-items:center;position:relative}
+  .nav .menuBtn{display:flex!important;margin-left:auto;flex:0 0 44px;order:5;position:relative;z-index:35}
+  .nav .navlinks{left:0;right:0;width:100%;top:72px;z-index:34}
+}
+.menuBtn{align-items:center;justify-content:center;flex-direction:column;gap:5px;padding:0;width:44px;height:44px;border:1px solid #d9d3c8;border-radius:3px!important;background:#fcfbf8;cursor:pointer}
+.menuBtn span{display:block;width:19px;height:2px;background:#0b2231;border-radius:0;transition:transform .2s,opacity .2s}
+.menuBtn[aria-expanded="true"] span:first-child{transform:translateY(7px) rotate(45deg)}
+.menuBtn[aria-expanded="true"] span:nth-child(2){opacity:0}
+.menuBtn[aria-expanded="true"] span:last-child{transform:translateY(-7px) rotate(-45deg)}
+
+/* Recognisable contact icons, kept inside their own button layout */
+.btn.whatsapp,.btn[href^="tel:"]{display:inline-flex;align-items:center;justify-content:center;gap:9px;white-space:nowrap}
+.btn.whatsapp::before,.floatWa::before{
+  content:"";display:inline-block;flex:0 0 17px;width:17px;height:17px;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23fff' d='M20.52 3.48A11.8 11.8 0 0 0 12.13 0C5.6 0 .28 5.3.28 11.83c0 2.08.55 4.1 1.6 5.88L.18 24l6.46-1.69a11.9 11.9 0 0 0 5.48 1.35h.01c6.53 0 11.85-5.31 11.85-11.84 0-3.16-1.23-6.13-3.46-8.34ZM12.13 21.65a9.8 9.8 0 0 1-5-1.37l-.36-.21-3.84 1 1.03-3.74-.24-.38a9.78 9.78 0 1 1 8.41 4.7Zm5.37-7.33c-.29-.15-1.72-.85-1.99-.95-.27-.1-.46-.15-.65.15-.2.29-.75.95-.92 1.14-.17.2-.34.22-.63.07-.29-.14-1.22-.45-2.33-1.44-.86-.77-1.44-1.72-1.61-2.01-.17-.3-.02-.45.13-.6.13-.13.29-.34.44-.51.15-.17.2-.29.3-.49.1-.2.05-.37-.02-.52-.07-.15-.65-1.57-.9-2.15-.24-.57-.48-.49-.65-.5h-.56c-.2 0-.52.07-.79.37-.27.3-1.03 1.01-1.03 2.44s1.06 2.83 1.21 3.03c.15.2 2.08 3.18 5.04 4.46.7.3 1.25.49 1.68.62.7.22 1.34.19 1.85.12.56-.08 1.72-.7 1.96-1.38.24-.69.24-1.28.17-1.4-.07-.12-.27-.2-.56-.34Z'/%3E%3C/svg%3E") center/contain no-repeat
+}
+.btn[href^="tel:"]::before,.floatCall::before{
+  content:"";display:inline-block;flex:0 0 16px;width:16px;height:16px;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23fff' d='M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.56 3.58.56.55 0 1 .45 1 1V20c0 .55-.45 1-1 1C10.61 21 3 13.39 3 4c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.46.56 3.58a1 1 0 0 1-.25 1.01l-2.19 2.2Z'/%3E%3C/svg%3E") center/contain no-repeat
+}
+.floatWa,.floatCall{display:flex;align-items:center;justify-content:center;font-size:0;line-height:0}
+.floatWa::before,.floatCall::before{width:24px;height:24px;flex-basis:24px}
+
+/* More restrained, editorial presentation — remove toy-like decorative treatments */
+:root{--radius-sm:3px;--radius-md:4px;--radius-lg:6px;--radius-xl:6px}
+.btn,.navactions .btn,.actions .btn,.ctaButtons .btn{border-radius:2px!important;box-shadow:none}
+.card,.dentistCard,.formBox,.faqItem,.detail,.serviceDetail,.contactCard,.infoCard,.featureCard,.reviewCard,.appointmentCard{border-radius:3px!important;box-shadow:none}
+.card{border:1px solid #e3ded5;min-height:0;padding:28px 26px;transition:border-color .2s,background .2s}
+.card:hover{transform:none;box-shadow:none;border-color:#b89461;background:#fffefa}
+.card:after{height:1px}
+.cardIcon{width:30px;height:2px;border:0!important;border-radius:0!important;background:#b89461;font-size:0}
+.dentistAvatar{border-radius:2px!important;background:#f0ece4;color:#17394c;border:1px solid #d8cbb7;font:600 22px Georgia,serif;box-shadow:none}
+.heroVisual{border-radius:3px!important;background:#e9e5dc;box-shadow:none}
+.heroVisual:before{border-radius:2px!important;inset:15px;border-color:#c7b58f}
+.tooth{width:auto;height:auto;background:transparent;box-shadow:none}
+.tooth svg{width:120px;opacity:.72}
+.visualFoot{box-shadow:none;border-left-width:2px;border-radius:0!important}
+.illustration{border-radius:3px!important;background:#eeebe4;box-shadow:none}
+.illustration:before{border-radius:2px!important}
+.clinicArt{opacity:.72;transform:scale(.92)}
+.pageHero:after{display:none}
+.faqItem{border-bottom:1px solid #ddd6ca!important}
+.faqQ{border-radius:0!important}
+.field input,.field select,.field textarea,input,select,textarea{border-radius:2px!important}
+.floatBtn{border-radius:3px!important;width:48px;height:48px}
+.brandmark{border-radius:2px!important}
+@media(max-width:720px){
+  .menuBtn{margin-left:auto!important}
+  .nav{gap:12px}
+  .heroVisual{border-radius:3px!important}
+  .illustration{border-radius:3px!important}
+  .card{padding:23px 20px}
+  .floatBtn{border-radius:3px!important}
+}

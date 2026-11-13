@@ -99,3 +99,22 @@ body{background:#fcfbf8;color:#20313a;font-size:15px;letter-spacing:.005em}
 @media(max-width:980px){.wrap{width:calc(100% - 44px)}.heroGrid{gap:35px}.navlinks{gap:14px}.hero h1{font-size:clamp(44px,6vw,62px)}.footerGrid{grid-template-columns:1fr 1fr}}
 @media(max-width:720px){.wrap{width:calc(100% - 34px)}.topbar{font-size:9px}.nav{height:72px}.navlinks{top:72px}.hero:before{inset:54% 0 0}.heroGrid{padding:58px 0 45px;gap:36px;min-height:auto}.hero h1{font-size:48px;letter-spacing:-1.8px}.heroVisual{height:350px;max-width:470px;border-radius:2px 110px 2px 2px}.section{padding:72px 0}.sectionHead{margin-bottom:35px}.sectionHead h2,.content h2{font-size:37px}.illustration{min-height:340px;border-radius:2px 90px 2px 2px}.cards{grid-template-columns:1fr 1fr;gap:12px}.card{padding:22px 18px;min-height:210px}.card h3{font-size:16px}.dentistCard{padding:20px}.ctaBand{padding:48px 0}.ctaBand h2{font-size:29px}.pageHero{padding:64px 0}.pageHero h1{font-size:44px}.serviceDetail{grid-template-columns:1fr;gap:9px;padding:25px 0}.contactGrid{gap:35px}.map iframe{height:330px}.formBox{padding:22px}.footerGrid{grid-template-columns:1fr 1fr;gap:25px}.footerGrid>div:first-child{grid-column:1/-1}.floating{right:14px;bottom:14px}.floatBtn{width:48px;height:48px}}
 @media(max-width:420px){.cards{grid-template-columns:1fr}.hero h1{font-size:43px}.heroVisual{height:310px}.checks{grid-template-columns:1fr}.ctaButtons .btn{width:100%}}
+
+/* SOFT-CORNER DESIGN SYSTEM — replace sharp box edges with refined curves */
+:root{--radius-sm:12px;--radius-md:18px;--radius-lg:26px;--radius-xl:34px}
+.btn,.navactions .btn,.actions .btn,.ctaButtons .btn{border-radius:999px!important}
+.card,.dentistCard,.formBox,.faqItem,.detail,.serviceDetail,.contactCard,.infoCard,.featureCard,.reviewCard,.appointmentCard{border-radius:var(--radius-md)!important;overflow:hidden}
+.cardIcon,.dentistAvatar,.iconBox,.serviceIcon{border-radius:15px!important}
+.heroVisual,.illustration,.building,.clinicArt,.map iframe,.map,.gallery img,.galleryItem,.photoCard,.imageCard{border-radius:var(--radius-xl)!important;overflow:hidden}
+.heroVisual,.heroVisual:before,.illustration,.illustration:before{border-radius:var(--radius-xl)!important}
+.pageHero,.ctaBand,.trustbar{overflow:hidden}
+.field input,.field select,.field textarea,input,select,textarea{border-radius:13px!important}
+.floatBtn{border-radius:50%!important}
+.brandmark{border-radius:15px!important}
+.navlinks a{border-radius:8px}
+.faqQ{border-radius:12px}
+.card,.dentistCard,.formBox,.serviceDetail,.reviewCard,.appointmentCard{box-shadow:0 12px 34px rgba(11,34,49,.055)}
+@media(max-width:720px){
+.heroVisual,.illustration,.building,.clinicArt,.map iframe,.gallery img,.galleryItem,.photoCard,.imageCard{border-radius:24px!important}
+.card,.dentistCard,.formBox,.faqItem,.detail,.serviceDetail,.contactCard,.infoCard,.featureCard,.reviewCard,.appointmentCard{border-radius:17px!important}
+}

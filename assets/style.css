@@ -100,95 +100,172 @@ body{background:#fcfbf8;color:#20313a;font-size:15px;letter-spacing:.005em}
 @media(max-width:720px){.wrap{width:calc(100% - 34px)}.topbar{font-size:9px}.nav{height:72px}.navlinks{top:72px}.hero:before{inset:54% 0 0}.heroGrid{padding:58px 0 45px;gap:36px;min-height:auto}.hero h1{font-size:48px;letter-spacing:-1.8px}.heroVisual{height:350px;max-width:470px;border-radius:2px 110px 2px 2px}.section{padding:72px 0}.sectionHead{margin-bottom:35px}.sectionHead h2,.content h2{font-size:37px}.illustration{min-height:340px;border-radius:2px 90px 2px 2px}.cards{grid-template-columns:1fr 1fr;gap:12px}.card{padding:22px 18px;min-height:210px}.card h3{font-size:16px}.dentistCard{padding:20px}.ctaBand{padding:48px 0}.ctaBand h2{font-size:29px}.pageHero{padding:64px 0}.pageHero h1{font-size:44px}.serviceDetail{grid-template-columns:1fr;gap:9px;padding:25px 0}.contactGrid{gap:35px}.map iframe{height:330px}.formBox{padding:22px}.footerGrid{grid-template-columns:1fr 1fr;gap:25px}.footerGrid>div:first-child{grid-column:1/-1}.floating{right:14px;bottom:14px}.floatBtn{width:48px;height:48px}}
 @media(max-width:420px){.cards{grid-template-columns:1fr}.hero h1{font-size:43px}.heroVisual{height:310px}.checks{grid-template-columns:1fr}.ctaButtons .btn{width:100%}}
 
-/* SOFT-CORNER DESIGN SYSTEM — replace sharp box edges with refined curves */
-:root{--radius-sm:12px;--radius-md:18px;--radius-lg:26px;--radius-xl:34px}
-.btn,.navactions .btn,.actions .btn,.ctaButtons .btn{border-radius:999px!important}
-.card,.dentistCard,.formBox,.faqItem,.detail,.serviceDetail,.contactCard,.infoCard,.featureCard,.reviewCard,.appointmentCard{border-radius:var(--radius-md)!important;overflow:hidden}
-.cardIcon,.dentistAvatar,.iconBox,.serviceIcon{border-radius:15px!important}
-.heroVisual,.illustration,.building,.clinicArt,.map iframe,.map,.gallery img,.galleryItem,.photoCard,.imageCard{border-radius:var(--radius-xl)!important;overflow:hidden}
-.heroVisual,.heroVisual:before,.illustration,.illustration:before{border-radius:var(--radius-xl)!important}
-.pageHero,.ctaBand,.trustbar{overflow:hidden}
-.field input,.field select,.field textarea,input,select,textarea{border-radius:13px!important}
-.floatBtn{border-radius:50%!important}
-.brandmark{border-radius:15px!important}
-.navlinks a{border-radius:8px}
-.faqQ{border-radius:12px}
-.card,.dentistCard,.formBox,.serviceDetail,.reviewCard,.appointmentCard{box-shadow:0 12px 34px rgba(11,34,49,.055)}
-@media(max-width:720px){
-.heroVisual,.illustration,.building,.clinicArt,.map iframe,.gallery img,.galleryItem,.photoCard,.imageCard{border-radius:24px!important}
-.card,.dentistCard,.formBox,.faqItem,.detail,.serviceDetail,.contactCard,.infoCard,.featureCard,.reviewCard,.appointmentCard{border-radius:17px!important}
+
+
+/* ORADENT — unified premium responsive design system */
+:root{
+  --navy:#102a3a;--navy2:#1b4052;--gold:#b89461;--cream:#f5f2ec;
+  --paper:#fffefa;--ink:#243640;--muted:#6b7a82;--line:#e7e1d7;
+  --r-sm:12px;--r-md:18px;--r-lg:26px;--r-xl:34px;
 }
-
-/* Accessibility refinements */
-.skipLink{position:fixed;z-index:9999;top:12px;left:12px;padding:12px 18px;border-radius:999px;background:#b89461;color:#0b2231;font-weight:700;transform:translateY(-160%);transition:transform .2s}
-.skipLink:focus{transform:translateY(0)}
-:focus-visible{outline:3px solid #b89461;outline-offset:4px}
-.menuBtn{border:1px solid #e5dfd4;border-radius:50%;width:42px;height:42px;background:#f4f0e8;color:#0b2231}
-
-
-/* WARM NEUTRAL BRAND PALETTE — remove green cast throughout */
-:root{--green:#c8b99f}
-.btn.whatsapp,.btn.whatsapp:hover,.floatWa{background:#17394c;color:#fff}
-.heroVisual{background:linear-gradient(145deg,#e8e2d7,#d8cebf 52%,#f1ece3)}
-.illustration{background:linear-gradient(145deg,#e8e2d7,#d9cfbf 55%,#f2ede4)}
-.building{background:#fbfaf5}
-.windows i{background:#d8d0c2}
-.door{background:#c9bda9}
-
-
-/* ORADENT REFINEMENT — clear navigation, restrained clinical identity */
-@media (max-width:720px){
-  .nav{display:flex;justify-content:space-between;align-items:center;position:relative}
-  .nav .menuBtn{display:flex!important;margin-left:auto;flex:0 0 44px;order:5;position:relative;z-index:35}
-  .nav .navlinks{left:0;right:0;width:100%;top:72px;z-index:34}
-}
-.menuBtn{align-items:center;justify-content:center;flex-direction:column;gap:5px;padding:0;width:44px;height:44px;border:1px solid #d9d3c8;border-radius:3px!important;background:#fcfbf8;cursor:pointer}
-.menuBtn span{display:block;width:19px;height:2px;background:#0b2231;border-radius:0;transition:transform .2s,opacity .2s}
+html{scroll-padding-top:100px}
+body{background:var(--paper);color:var(--ink);overflow-x:hidden}
+.wrap{width:min(1180px,calc(100% - 48px))}
+.topbar{font-size:10px;letter-spacing:.045em}
+.topbar .wrap{min-height:38px}
+.header{background:rgba(255,254,250,.96);box-shadow:0 5px 24px rgba(16,42,58,.045)}
+.nav{height:78px;gap:22px}
+.brand{flex:0 0 auto;gap:10px;font-size:18px}
+.brandmark{width:44px;height:44px;border-radius:14px;background:linear-gradient(145deg,#21495c,#0b2231);box-shadow:none}
+.navlinks{gap:clamp(12px,1.7vw,23px);white-space:nowrap;font-size:11px}
+.navlinks a{padding:9px 0}
+.navactions{flex:0 0 auto;gap:8px}
+.btn,.btn.small{min-height:44px;padding:12px 18px;border-radius:999px!important;font-size:11px;letter-spacing:.045em;box-shadow:0 5px 14px rgba(16,42,58,.08)}
+.btn:hover{transform:translateY(-1px)}
+.btn.gold{background:var(--gold);color:#142c3a}
+.btn.outline{border-color:#cfc5b5;background:rgba(255,255,255,.35)}
+.menuBtn{display:none;flex:0 0 44px;width:44px;height:44px;padding:0;align-items:center;justify-content:center;flex-direction:column;gap:5px;border:1px solid var(--line);border-radius:14px!important;background:#fffefa;cursor:pointer}
+.menuBtn span{display:block;width:19px;height:2px;border-radius:2px;background:var(--navy);transition:transform .2s,opacity .2s}
 .menuBtn[aria-expanded="true"] span:first-child{transform:translateY(7px) rotate(45deg)}
 .menuBtn[aria-expanded="true"] span:nth-child(2){opacity:0}
 .menuBtn[aria-expanded="true"] span:last-child{transform:translateY(-7px) rotate(-45deg)}
 
-/* Recognisable contact icons, kept inside their own button layout */
+.hero{background:linear-gradient(112deg,#f7f5ef 0%,#f0ece3 100%)}
+.hero:before{inset:0 0 0 57%;background:linear-gradient(145deg,#e8e2d7,#d9d0c2)}
+.heroGrid{gap:clamp(34px,6vw,78px);padding:76px 0;min-height:570px}
+.hero h1{font-size:clamp(42px,5.2vw,68px);line-height:1.08;letter-spacing:-2.3px;margin:16px 0}
+.hero h1 em{color:#a98453}
+.lead{font-size:15px;line-height:1.85;max-width:560px}
+.actions{gap:12px;margin-top:25px}
+.heroVisual{height:455px;border-radius:var(--r-xl)!important;background:linear-gradient(145deg,#e7e1d6,#d4cbbb 55%,#f1ede5);box-shadow:0 18px 48px rgba(16,42,58,.09)}
+.heroVisual:before{inset:14px;border:1px solid rgba(255,255,255,.72);border-radius:25px!important}
+.tooth{width:190px;height:205px;border-radius:50%;background:rgba(255,255,255,.58);box-shadow:0 12px 30px rgba(16,42,58,.06)}
+.tooth svg{width:142px}
+.visualFoot{right:24px;bottom:24px;border:0;border-radius:14px!important;padding:13px 17px;box-shadow:0 8px 24px rgba(16,42,58,.08)}
+.trustbar{background:linear-gradient(105deg,#102a3a,#1b4052)}
+.trustbar .wrap{padding:23px 0}
+.trustitem{padding:5px 14px}
+.trustitem b{font-size:12px}
+.trustitem span{font-size:11px}
+.section{padding:82px 0}
+.section.soft{background:#f6f3ed}
+.sectionHead{margin-bottom:38px}
+.sectionHead h2,.content h2{font-size:clamp(30px,3.8vw,44px);letter-spacing:-1.1px;line-height:1.16}
+.sectionHead p,.content p{line-height:1.85}
+.split{gap:clamp(30px,5vw,64px)}
+.illustration{min-height:410px;border-radius:var(--r-xl)!important;background:linear-gradient(145deg,#ebe6dc,#d9d1c5)}
+.illustration:before{inset:14px;border-radius:24px!important}
+.clinicArt{transform:scale(.96);opacity:.9}
+.artNote{bottom:20px}
+.checks{gap:12px 18px}
+.checks span{line-height:1.6}
+.cards{gap:18px}
+.card{min-height:0;padding:27px 25px;border:1px solid var(--line);border-radius:var(--r-md)!important;background:#fff;box-shadow:0 8px 26px rgba(16,42,58,.045);transition:transform .2s,box-shadow .2s,border-color .2s}
+.card:hover{transform:translateY(-3px);border-color:#d5c3a7;box-shadow:0 14px 34px rgba(16,42,58,.08)}
+.cardIcon{width:42px;height:42px;border-radius:14px!important;background:#f4f0e8;color:#a98453}
+.card h3{font-size:16px;line-height:1.4;margin:16px 0 8px}
+.card p{font-size:12px;line-height:1.75}
+.more{font-size:10px;letter-spacing:.07em}
+.dentistCard{padding:25px;border-radius:var(--r-md)!important;gap:17px;align-items:center;box-shadow:0 8px 25px rgba(16,42,58,.045)}
+.dentistAvatar{width:68px;height:68px;border-radius:20px!important;background:linear-gradient(145deg,#1b4052,#b89461);border:0}
+.dentistCard h3{font-size:19px}
+.ctaBand{padding:54px 0;background:linear-gradient(105deg,#102a3a,#1b4052)}
+.ctaBand .wrap{gap:28px}
+.ctaBand h2{font-size:clamp(25px,3vw,34px);line-height:1.2}
+.ctaButtons{gap:10px}
+.faqList{max-width:860px}
+.faqItem{overflow:hidden;border:1px solid var(--line);border-radius:14px!important;background:#fff;margin:0 0 10px}
+.faqQ{padding:17px 19px;border-radius:14px!important;font-size:14px}
+.faqA{padding:0 19px 18px;line-height:1.8}
+.pageHero{padding:72px 0;background:linear-gradient(110deg,#f6f3ed,#ebe6dc)}
+.pageHero:after{font-size:280px;right:5%;top:-55px}
+.pageHero h1{font-size:clamp(38px,5vw,58px);letter-spacing:-1.8px}
+.pageHero p{line-height:1.85}
+.breadcrumbs{margin-bottom:16px}
+.serviceDetail{padding:27px 28px;margin:0 0 14px;border:1px solid var(--line);border-radius:var(--r-md)!important;background:#fff;gap:28px}
+.serviceDetail h3{font-size:21px}
+.serviceDetail p{line-height:1.85}
+.contactGrid{gap:clamp(28px,5vw,58px)}
+.detail{padding:15px 18px;border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:14px!important;background:#fff;line-height:1.75}
+.map{overflow:hidden;border-radius:var(--r-lg)!important}
+.map iframe{height:420px;border:0;border-radius:var(--r-lg)!important}
+.formBox{padding:32px;border:1px solid var(--line);border-radius:var(--r-lg)!important;background:#fff;box-shadow:0 12px 34px rgba(16,42,58,.06)}
+.formGrid{gap:18px}
+.field input,.field select,.field textarea,input,select,textarea{min-height:48px;padding:13px 15px;border:1px solid #ddd6ca;border-radius:13px!important;background:#fffefa;font:14px "DM Sans",sans-serif}
+.field textarea{min-height:120px}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--gold);outline:0;box-shadow:0 0 0 3px rgba(184,148,97,.14)}
+.legal{max-width:850px}
+.legal h2{margin-top:28px}
+.footer{padding:58px 0 24px}
+.footerGrid{gap:32px}
+.footerBottom{padding-top:18px}
+.floating{right:20px;bottom:20px;gap:10px}
+.floatBtn{width:50px;height:50px;border-radius:17px!important;display:flex;align-items:center;justify-content:center;font-size:0;box-shadow:0 8px 22px rgba(0,0,0,.18)}
 .btn.whatsapp,.btn[href^="tel:"]{display:inline-flex;align-items:center;justify-content:center;gap:9px;white-space:nowrap}
-.btn.whatsapp::before,.floatWa::before{
-  content:"";display:inline-block;flex:0 0 17px;width:17px;height:17px;
-  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23fff' d='M20.52 3.48A11.8 11.8 0 0 0 12.13 0C5.6 0 .28 5.3.28 11.83c0 2.08.55 4.1 1.6 5.88L.18 24l6.46-1.69a11.9 11.9 0 0 0 5.48 1.35h.01c6.53 0 11.85-5.31 11.85-11.84 0-3.16-1.23-6.13-3.46-8.34ZM12.13 21.65a9.8 9.8 0 0 1-5-1.37l-.36-.21-3.84 1 1.03-3.74-.24-.38a9.78 9.78 0 1 1 8.41 4.7Zm5.37-7.33c-.29-.15-1.72-.85-1.99-.95-.27-.1-.46-.15-.65.15-.2.29-.75.95-.92 1.14-.17.2-.34.22-.63.07-.29-.14-1.22-.45-2.33-1.44-.86-.77-1.44-1.72-1.61-2.01-.17-.3-.02-.45.13-.6.13-.13.29-.34.44-.51.15-.17.2-.29.3-.49.1-.2.05-.37-.02-.52-.07-.15-.65-1.57-.9-2.15-.24-.57-.48-.49-.65-.5h-.56c-.2 0-.52.07-.79.37-.27.3-1.03 1.01-1.03 2.44s1.06 2.83 1.21 3.03c.15.2 2.08 3.18 5.04 4.46.7.3 1.25.49 1.68.62.7.22 1.34.19 1.85.12.56-.08 1.72-.7 1.96-1.38.24-.69.24-1.28.17-1.4-.07-.12-.27-.2-.56-.34Z'/%3E%3C/svg%3E") center/contain no-repeat
-}
-.btn[href^="tel:"]::before,.floatCall::before{
-  content:"";display:inline-block;flex:0 0 16px;width:16px;height:16px;
-  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23fff' d='M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.56 3.58.56.55 0 1 .45 1 1V20c0 .55-.45 1-1 1C10.61 21 3 13.39 3 4c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.46.56 3.58a1 1 0 0 1-.25 1.01l-2.19 2.2Z'/%3E%3C/svg%3E") center/contain no-repeat
-}
-.floatWa,.floatCall{display:flex;align-items:center;justify-content:center;font-size:0;line-height:0}
-.floatWa::before,.floatCall::before{width:24px;height:24px;flex-basis:24px}
+.btn.whatsapp:before,.floatWa:before,.btn[href^="tel:"]:before,.floatCall:before{content:"";display:inline-block;flex:0 0 17px;width:17px;height:17px;background-position:center;background-repeat:no-repeat;background-size:contain}
+.btn.whatsapp:before,.floatWa:before{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23fff' d='M20.5 3.5A11.8 11.8 0 0 0 12.1 0C5.6 0 .3 5.3.3 11.8c0 2.1.5 4.1 1.6 5.9L.2 24l6.5-1.7a11.9 11.9 0 0 0 5.5 1.3h.1c6.5 0 11.8-5.3 11.8-11.8 0-3.2-1.2-6.1-3.5-8.3ZM12.1 21.6a9.8 9.8 0 0 1-5-1.3l-.4-.3-3.8 1 1-3.7-.2-.4a9.8 9.8 0 1 1 8.4 4.7Zm5.4-7.3c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.2-.7.1l-.9 1.2c-.2.2-.3.2-.6.1-1.7-.9-2.8-1.6-3.9-3.5-.3-.5.3-.5.8-1.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1.1 2.8 1.2 3c.2.2 2.1 3.2 5.1 4.5.7.3 1.2.5 1.7.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.3.1-1.4-.1-.1-.3-.2-.6-.4Z'/%3E%3C/svg%3E")}
+.btn[href^="tel:"]:before,.floatCall:before{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23fff' d='M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.2c1.1.4 2.3.6 3.6.6.5 0 1 .4 1 1V20c0 .6-.5 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.5 0 1 .4 1 1 0 1.2.2 2.5.6 3.6a1 1 0 0 1-.3 1Z'/%3E%3C/svg%3E")}
+.floatWa:before,.floatCall:before{width:23px;height:23px;flex-basis:23px}
+.skipLink{position:fixed;z-index:9999;top:12px;left:12px;padding:12px 18px;border-radius:999px;background:var(--gold);color:var(--navy);font-weight:700;transform:translateY(-160%);transition:transform .2s}
+.skipLink:focus{transform:translateY(0)}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
 
-/* More restrained, editorial presentation — remove toy-like decorative treatments */
-:root{--radius-sm:3px;--radius-md:4px;--radius-lg:6px;--radius-xl:6px}
-.btn,.navactions .btn,.actions .btn,.ctaButtons .btn{border-radius:2px!important;box-shadow:none}
-.card,.dentistCard,.formBox,.faqItem,.detail,.serviceDetail,.contactCard,.infoCard,.featureCard,.reviewCard,.appointmentCard{border-radius:3px!important;box-shadow:none}
-.card{border:1px solid #e3ded5;min-height:0;padding:28px 26px;transition:border-color .2s,background .2s}
-.card:hover{transform:none;box-shadow:none;border-color:#b89461;background:#fffefa}
-.card:after{height:1px}
-.cardIcon{width:30px;height:2px;border:0!important;border-radius:0!important;background:#b89461;font-size:0}
-.dentistAvatar{border-radius:2px!important;background:#f0ece4;color:#17394c;border:1px solid #d8cbb7;font:600 22px Georgia,serif;box-shadow:none}
-.heroVisual{border-radius:3px!important;background:#e9e5dc;box-shadow:none}
-.heroVisual:before{border-radius:2px!important;inset:15px;border-color:#c7b58f}
-.tooth{width:auto;height:auto;background:transparent;box-shadow:none}
-.tooth svg{width:120px;opacity:.72}
-.visualFoot{box-shadow:none;border-left-width:2px;border-radius:0!important}
-.illustration{border-radius:3px!important;background:#eeebe4;box-shadow:none}
-.illustration:before{border-radius:2px!important}
-.clinicArt{opacity:.72;transform:scale(.92)}
-.pageHero:after{display:none}
-.faqItem{border-bottom:1px solid #ddd6ca!important}
-.faqQ{border-radius:0!important}
-.field input,.field select,.field textarea,input,select,textarea{border-radius:2px!important}
-.floatBtn{border-radius:3px!important;width:48px;height:48px}
-.brandmark{border-radius:2px!important}
-@media(max-width:720px){
-  .menuBtn{margin-left:auto!important}
-  .nav{gap:12px}
-  .heroVisual{border-radius:3px!important}
-  .illustration{border-radius:3px!important}
-  .card{padding:23px 20px}
-  .floatBtn{border-radius:3px!important}
+@media(max-width:1040px) and (min-width:861px){
+  .nav{gap:13px}.navlinks{gap:11px;font-size:10px}.brand{font-size:16px}.brandmark{width:40px;height:40px}.navactions .btn{padding:10px 12px}
+}
+@media(max-width:860px){
+  .wrap{width:calc(100% - 40px)}
+  .nav{height:72px;position:relative;display:flex;justify-content:space-between;gap:12px}
+  .nav .menuBtn{display:flex!important;margin-left:auto;order:5;position:relative;z-index:42}
+  .navlinks{display:none;position:absolute;left:0;right:0;top:calc(100% + 8px);width:100%;padding:14px;border:1px solid var(--line);border-radius:18px!important;background:#fffefa;box-shadow:0 16px 34px rgba(16,42,58,.13);flex-direction:column;align-items:stretch;gap:3px;white-space:normal;z-index:41}
+  .navlinks.show{display:flex}
+  .navlinks a{padding:12px 14px;border-radius:11px}
+  .navlinks a:hover,.navlinks a.active{background:#f5f1e9}
+  .navlinks a:after{display:none}
+  .navactions .btn{display:none}
+  .hero:before{inset:53% 0 0}
+  .heroGrid,.split,.contactGrid{grid-template-columns:1fr}
+  .heroGrid{padding:52px 0 42px;gap:30px}
+  .hero h1{font-size:clamp(40px,8vw,56px);letter-spacing:-1.7px}
+  .heroVisual{height:350px;max-width:540px;width:100%;margin:auto}
+  .trustbar .wrap{grid-template-columns:1fr;gap:10px;padding:18px 0}
+  .trustitem{text-align:left;border:0;border-bottom:1px solid #ffffff25;padding:7px 0 12px}
+  .trustitem:last-child{border:0}
+  .section{padding:64px 0}
+  .illustration{min-height:330px}
+  .contactGrid{gap:28px}
+  .map iframe{height:340px}
+  .ctaBand .wrap{align-items:flex-start;flex-direction:column}
+  .footerGrid{grid-template-columns:1fr 1fr;gap:24px}
+  .footerGrid>div:first-child{grid-column:1/-1}
+}
+@media(max-width:560px){
+  .wrap{width:calc(100% - 32px)}
+  .topbar{font-size:9px}
+  .topbar .wrap{align-items:flex-start;gap:3px;flex-direction:column}
+  .heroGrid{padding:42px 0 34px}
+  .heroVisual{height:300px}
+  .visualKicker{top:24px;left:22px}
+  .visualFoot{right:16px;bottom:16px;font-size:9px}
+  .section{padding:54px 0}
+  .sectionHead{margin-bottom:28px}
+  .sectionHead h2,.content h2{font-size:32px}
+  .cards{grid-template-columns:1fr;gap:12px}
+  .card{padding:22px}
+  .dentistCard{padding:19px;gap:14px}
+  .dentistAvatar{width:58px;height:58px;border-radius:16px!important}
+  .ctaBand{padding:42px 0}
+  .ctaBand h2{font-size:26px}
+  .ctaButtons{width:100%;flex-direction:column}
+  .ctaButtons .btn{width:100%}
+  .pageHero{padding:54px 0}
+  .pageHero h1{font-size:40px}
+  .serviceDetail{grid-template-columns:1fr;gap:8px;padding:21px}
+  .formBox{padding:20px}
+  .formGrid{grid-template-columns:1fr;gap:14px}
+  .field.full{grid-column:auto}
+  .footerGrid{grid-template-columns:1fr;gap:18px}
+  .footerGrid>div:first-child{grid-column:auto}
+  .floating{right:12px;bottom:12px;gap:8px}
+  .floatBtn{width:46px;height:46px;border-radius:15px!important}
 }
